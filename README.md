@@ -25,3 +25,28 @@ The dashboard uses a released year-selection dropdown menu (2011–2023) that dy
 * **Interactive Controls:** `ipywidgets` (`@interact`)
 * **Visualization:** Plotly (`plotly.graph_objects`, `plotly.express`)
 * **Data Processing:** `pandas`
+* 
+---
+
+## 📦 Local Setup & Installation
+
+To run this notebook locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/vandao288/spotify-2023-dashboard.git](https://github.com/vandao288/spotify-2023-dashboard.git)
+   cd spotify-2023-dashboard
+Install dependencies:
+Bash
+pip install -r requirements.txt
+Launch Jupyter:
+Bash
+jupyter notebook
+Open your notebook file and select Kernel ➔ Restart & Run All.
+
+Repository Structure
+
+├── spotify2023.csv                      # Dataset containing song features and streaming metrics
+├── dashboard_spotify2023.ipynb          # Main Jupyter Notebook dashboard
+├── requirements.txt                     # Dependencies for Binder and local setup
+└── README.md                            # Project documentation
