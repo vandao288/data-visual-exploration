@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+
+# Ensure widget extensions are available for the interactive year dropdown.
+jupyter nbextension enable --py widgetsnbextension --sys-prefix 2>/dev/null || true

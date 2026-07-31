@@ -1,0 +1,10 @@
+.venv/
+venv/
+.git/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+dashboard_spotify2023.ipynb
+README.md
+AGENTS.md
+.gitignore
