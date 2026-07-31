@@ -8,3 +8,4 @@ dashboard_spotify2023.ipynb
 README.md
 AGENTS.md
 .gitignore
+deploy/

@@ -64,7 +64,7 @@ Then open http://localhost:8866/ and use the **Released year** dropdown.
 
 ## Deploy as a website
 
-This repo includes a `Dockerfile` that serves the interactive dashboard with [Voila](https://voila.readthedocs.io/) on port 7860.
+This repo includes `deploy/Dockerfile.hf` that serves the interactive dashboard with [Voila](https://voila.readthedocs.io/) on port 7860. The GitHub Action copies it to `Dockerfile` when deploying to Hugging Face Spaces (Binder uses `requirements.txt` instead).
 
 ### Option A — Hugging Face Spaces (recommended)
 
@@ -91,7 +91,7 @@ Click the Binder link in the table above, or use:
 - `spotify-2023.csv` — Dataset containing song features and streaming metrics
 - `dashboard_spotify2023.ipynb` — Full analysis Jupyter Notebook (development)
 - `app.ipynb` — Production dashboard notebook served by Voila
-- `Dockerfile` — Container image for Hugging Face Spaces / Docker hosts
+- `deploy/Dockerfile.hf` — Container image for Hugging Face Spaces / Docker hosts
 - `requirements.txt` — Python dependencies
 - `README.md` — Project documentation
 
