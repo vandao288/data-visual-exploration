@@ -1,0 +1,21 @@
+# Hugging Face Spaces / container deployment for the interactive Voila dashboard.
+# See https://huggingface.co/docs/hub/spaces-sdks-docker
+
+FROM python:3.12-slim-bookworm
+
+# HF Spaces containers run as UID 1000.
+RUN useradd -m -u 1000 user
+USER user
+ENV HOME=/home/user \
+    PATH=/home/user/.local/bin:$PATH
+
+WORKDIR /home/user/app
+
+COPY --chown=user requirements.txt .
+RUN pip install --no-cache-dir --user -r requirements.txt
+
+COPY --chown=user app.ipynb spotify-2023.csv ./
+
+EXPOSE 7860
+
+CMD ["voila", "app.ipynb", "--port=7860", "--Voila.ip=0.0.0.0", "--no-browser", "--strip_sources=True", "--enable_nbextensions=True"]
