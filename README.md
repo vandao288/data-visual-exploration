@@ -44,9 +44,10 @@ Bash
 jupyter notebook
 Open your notebook file and select Kernel ➔ Restart & Run All.
 
-Repository Structure
+## Repository Structure
 
 - spotify2023.csv                      # Dataset containing song features and streaming metrics
 - dashboard_spotify2023.ipynb          # Main Jupyter Notebook dashboard
 - requirements.txt                     # Dependencies for Binder and local setup
 - README.md                            # Project documentation
+
