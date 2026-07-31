@@ -4,7 +4,7 @@
 
 An interactive data visualization dashboard analyzing most streamed Spotify songs and their audio features (danceability, valence, and energy) across release years from 2011 to 2023. 
 
-Built with Plotly and ipywidgets, this dashboard features a unified 4-plot grid powered by an interactive released year-selection dropdown menu.
+Built with Plotly and ipywidgets, this dashboard features a unified 4-plot grid powered by an interactive released year-selection dropdown menu and a **Light/Dark** theme toggle.
 
 ## Live interactive dashboard
 
