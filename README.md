@@ -94,4 +94,5 @@ Click the Binder link in the table above, or use:
 - `deploy/Dockerfile.hf` — Container image for Hugging Face Spaces / Docker hosts
 - `requirements.txt` — Python dependencies
 - `README.md` — Project documentation
+- `dashboard-demo-video.mp4` - Dashboard demo video
 
