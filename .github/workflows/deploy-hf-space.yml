@@ -15,8 +15,15 @@ jobs:
           lfs: true
 
       - name: Prepare Hugging Face Space build files
-        if: ${{ secrets.HF_USER != '' && secrets.HF_TOKEN != '' && secrets.HF_SPACE != '' }}
+        env:
+          HF_USER: ${{ secrets.HF_USER }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ secrets.HF_SPACE }}
         run: |
+          if [ -z "$HF_USER" ] || [ -z "$HF_TOKEN" ] || [ -z "$HF_SPACE" ]; then
+            echo "HF_USER, HF_TOKEN, or HF_SPACE secrets not configured; skipping HF deploy."
+            exit 0
+          fi
           cp deploy/Dockerfile.hf Dockerfile
           cp deploy/.dockerignore.hf .dockerignore
           git config user.email "github-actions[bot]@users.noreply.github.com"
